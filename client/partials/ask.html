@@ -1,0 +1,14 @@
+<a href="#!/dash">Home</a>
+
+<h2>New Question</h2>
+
+<h3>{{errors.ask_question.message}}</h1>
+
+<form ng-submit="addQuestion()">
+    <p>Question:</p>
+    <textarea ng-model="question.question" rows="4" cols="80"></textarea>
+    <p>Description (optional)</p>
+    <textarea ng-model="question.description" rows="8" cols="80"></textarea>
+    <input type="button" ng-click="cancel()" value="Cancel">
+    <input type="submit" value="Submit">
+</form>

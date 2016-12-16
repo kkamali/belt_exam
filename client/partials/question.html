@@ -1,0 +1,17 @@
+<a href="#!/dash">Home</a> | <a href="#!/question/{{question._id}}/new_answer">Answer this Question</a>
+<p><a href="/logout">Logout</a></p>
+
+<h2>{{question.question}}</h2>
+<h4>{{question.description}}</h4>
+
+<ul>
+    <li ng-repeat="answer in answers">
+        <h3>{{answer._user.name}}:</h3>
+        <h4>{{answer.answer}}</h4>
+        <h5>{{answer.details}}</h5>
+        <form ng-submit="like($index)">
+            {{answer.likes}} likes
+            <input type="submit" value="Like">
+        </form>
+    </li>
+</ul>
